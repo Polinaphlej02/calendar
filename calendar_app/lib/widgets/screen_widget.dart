@@ -1,4 +1,5 @@
 import 'package:calendar_app/static/colors.dart';
+import 'package:calendar_app/widgets/calendar_month.dart';
 import 'package:calendar_app/widgets/switcher_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -36,6 +37,7 @@ class ScreenWidget extends StatelessWidget {
         children: [
           SwitcherWidget(),
           TextFieldWidget(),
+          CalendarMonth(),
         ],
       ),
     );

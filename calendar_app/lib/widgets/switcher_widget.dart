@@ -19,7 +19,7 @@ class _SwitcherWidgetState extends State<SwitcherWidget> {
    Map buttonFill = {
     "Day": CalendarColors.lightBrown,
     "Week": CalendarColors.lightBrown,
-    "Month": CalendarColors.lightBrown,
+    "Month": CalendarColors.mainBrown,
   };
 
   String chosenButton = "Month";
