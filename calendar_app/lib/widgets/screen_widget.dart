@@ -2,6 +2,8 @@ import 'package:calendar_app/static/colors.dart';
 import 'package:calendar_app/widgets/switcher_widget.dart';
 import 'package:flutter/material.dart';
 
+import 'textField_widget.dart';
+
 class ScreenWidget extends StatelessWidget {
   const ScreenWidget({super.key});
 
@@ -33,6 +35,7 @@ class ScreenWidget extends StatelessWidget {
       body: Column(
         children: [
           SwitcherWidget(),
+          TextFieldWidget(),
         ],
       ),
     );

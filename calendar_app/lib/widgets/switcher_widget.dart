@@ -29,7 +29,6 @@ class _SwitcherWidgetState extends State<SwitcherWidget> {
     chosenButton = name;
     buttonFill.forEach((key, value) {buttonFill[key] = CalendarColors.lightBrown;});
     buttonFill[name] = CalendarColors.mainBrown;
-    print(buttonFill);
     });
   }
 
@@ -40,10 +39,10 @@ class _SwitcherWidgetState extends State<SwitcherWidget> {
         child: Container(
       color: CalendarColors.mainBrown,
       child: Padding(
-        padding: EdgeInsets.only(left: 55, right: 55, bottom: 15),
+        padding: const EdgeInsets.only(left: 50, right: 50, bottom: 15),
         child: Container(
-            padding: EdgeInsets.only(top: 8, bottom: 8),
-            decoration: BoxDecoration(
+            padding: const EdgeInsets.only(top: 8, bottom: 8),
+            decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(10)),
               color: CalendarColors.lightBrown,
             ),
