@@ -32,6 +32,13 @@ class _CalendarMonthState extends State<CalendarMonth> {
           weekdayStyle: dayStyle,
           weekendStyle: dayStyle,
         ),
+        calendarStyle: CalendarStyle(
+          todayDecoration: BoxDecoration(
+            color: Color.fromARGB(225, 199, 188, 186),
+            shape: BoxShape.rectangle,
+            borderRadius: BorderRadius.all(Radius.circular(5)),
+          )
+        ),
         startingDayOfWeek: StartingDayOfWeek.monday,
         sixWeekMonthsEnforced: true,
         headerVisible: false,
