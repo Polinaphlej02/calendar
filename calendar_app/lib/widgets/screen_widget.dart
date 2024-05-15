@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'package:calendar_app/static/colors.dart';
+import 'package:calendar_app/widgets/switcher_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ScreenWidget extends StatelessWidget {
   const ScreenWidget({super.key});
@@ -9,7 +9,7 @@ class ScreenWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Align(
+        title: const Align(
           alignment: Alignment.centerRight,
           child:
           Padding(
@@ -17,22 +17,22 @@ class ScreenWidget extends StatelessWidget {
             child:Text("May 2024", style: TextStyle(
           fontFamily: "Mulish-VariableFont_wght",
           fontWeight: FontWeight.w900,
-          fontSize: 20,
+          fontSize: 18,
           color: Colors.white,
         ),
         ),)
         ),
-        backgroundColor: const Color.fromARGB(255, 152, 107, 90),
+        backgroundColor: CalendarColors.mainBrown,
         leading: Padding(
             padding:EdgeInsets.only(left: 30),
             child:IconButton
           (onPressed: (){}, 
-          icon: Icon(Icons.menu, color: Colors.white, size: 30,),
+          icon: const Icon(Icons.menu, color: Colors.white, size: 30,),
           )
       ),),
       body: Column(
         children: [
-
+          SwitcherWidget(),
         ],
       ),
     );
