@@ -84,7 +84,9 @@ class ScreenWidget extends StatelessWidget {
                 ],
               ),
             ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/new_task');
+          },
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
