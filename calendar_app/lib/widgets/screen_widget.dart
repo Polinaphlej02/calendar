@@ -2,6 +2,7 @@ import 'package:calendar_app/static/colors.dart';
 import 'package:calendar_app/widgets/calendar_month.dart';
 import 'package:calendar_app/widgets/line_widget.dart';
 import 'package:calendar_app/widgets/switcher_widget.dart';
+import 'package:calendar_app/widgets/tasks_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -40,12 +41,13 @@ class ScreenWidget extends StatelessWidget {
               ),
             )),
       ),
-      body: const Column(
+      body: Column(
         children: [
-          SwitcherWidget(),
-          TextFieldWidget(),
-          CalendarMonth(),
-          LineWidget(),
+          const SwitcherWidget(),
+          const TextFieldWidget(),
+          const CalendarMonth(),
+          const LineWidget(),
+          TasksList(),
         ],
       ),
       floatingActionButton: Padding(

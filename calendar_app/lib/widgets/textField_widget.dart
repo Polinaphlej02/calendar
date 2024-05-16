@@ -7,7 +7,7 @@ class TextFieldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 30, left:50, right: 50),
+      padding: EdgeInsets.only(top: 30, left:40, right: 40),
       child:TextField(
       decoration: InputDecoration(
         suffixIcon: Icon(Icons.search),
