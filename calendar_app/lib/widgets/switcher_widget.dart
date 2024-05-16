@@ -9,7 +9,7 @@ class SwitcherWidget extends StatefulWidget {
 }
 
 class _SwitcherWidgetState extends State<SwitcherWidget> {
-  static const TextStyle switcher_text_style = TextStyle(
+  static const TextStyle switcherTextStyle = TextStyle(
     fontFamily: "Mulish-VariableFont_wght",
     fontWeight: FontWeight.w900,
     fontSize: 14,
@@ -41,7 +41,7 @@ class _SwitcherWidgetState extends State<SwitcherWidget> {
       child: Padding(
         padding: const EdgeInsets.only(left: 50, right: 50, bottom: 15),
         child: Container(
-            padding: const EdgeInsets.only(top: 8, bottom: 8),
+            padding: const EdgeInsets.only(top: 6, bottom: 6),
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(10)),
               color: CalendarColors.lightBrown,
@@ -58,7 +58,7 @@ class _SwitcherWidgetState extends State<SwitcherWidget> {
                         borderRadius: BorderRadius.circular(12),
                       ),
                     ),
-                    child: Text(name, style: switcher_text_style),
+                    child: Text(name, style: switcherTextStyle),
                   ),
               ],
             )),
