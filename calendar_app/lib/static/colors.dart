@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CalendarColors {
-  static const Color mainBrown = Color.fromARGB(225, 143, 115, 94);
-  static const Color lightBrown = Color.fromARGB(255, 203, 180, 149);
-  static const Color darkBrown = Color.fromARGB(255, 85, 51, 39);
-  static const Color circleBrown = Color.fromARGB(225, 190, 186, 187);
-  static const Color iconFGrey = Color.fromARGB(225, 220, 220, 220);
-  static const Color sideBarBrown = Color.fromARGB(225, 213, 209, 208);
+  static const Color mainBrown = Color(0xFF8f735e);
+  static const Color lightBrown = Color(0xFFcbb495);
+  static const Color darkBrown = Color(0xFF553327);
+  static const Color circleBrown = Color(0xFFbeb5b6);
+  static const Color iconFGrey = Color(0xFFd9d9d9);
+  static const Color sideBarBrown = Color(0xFFd5d1d0);
 }

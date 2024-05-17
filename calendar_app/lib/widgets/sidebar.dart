@@ -8,7 +8,6 @@ class SideBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Drawer(
       backgroundColor: CalendarColors.sideBarBrown,
-      
     );
   }
 }
