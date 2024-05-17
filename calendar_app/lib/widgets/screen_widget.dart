@@ -15,6 +15,7 @@ class ScreenWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset : false,
       drawer: SideBarWidget(),
       appBar: AppBar(
         title: const Align(
