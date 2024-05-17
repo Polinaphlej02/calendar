@@ -32,7 +32,7 @@ class _CalendarMonthState extends State<CalendarMonth> {
               firstDay: _firstDay,
               lastDay: _lastDay,
               rowHeight: 40,
-              calendarFormat: CalendarFormat.week,
+              calendarFormat: CalendarFormat.month,
               daysOfWeekStyle: DaysOfWeekStyle(
                 weekdayStyle: dayStyle,
                 weekendStyle: dayStyle,

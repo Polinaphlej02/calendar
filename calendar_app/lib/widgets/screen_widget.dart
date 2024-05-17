@@ -1,6 +1,5 @@
 import 'package:calendar_app/static/colors.dart';
-import 'package:calendar_app/widgets/calendar_day.dart';
-import 'package:calendar_app/widgets/calendar_month.dart';
+import 'package:calendar_app/widgets/calendar.dart';
 import 'package:calendar_app/widgets/line_widget.dart';
 import 'package:calendar_app/widgets/sidebar.dart';
 import 'package:calendar_app/widgets/switcher_widget.dart';
@@ -11,7 +10,8 @@ import 'package:flutter/widgets.dart';
 import 'textField_widget.dart';
 
 class ScreenWidget extends StatelessWidget {
-  const ScreenWidget({super.key});
+  ScreenWidget({super.key});
+  final ValueNotifier<String> textNotifier = ValueNotifier<String>("Month");
 
   @override
   Widget build(BuildContext context) {
@@ -51,10 +51,9 @@ class ScreenWidget extends StatelessWidget {
       ),
       body: Column(
         children: [
-          SwitcherWidget(),
+          SwitcherWidget(textNotifier:textNotifier),
           TextFieldWidget(),
-          // CalendarMonth(),
-          CalendarDay(),
+          CalendarWidget(),
           LineWidget(),
           TasksList(),
         ],
