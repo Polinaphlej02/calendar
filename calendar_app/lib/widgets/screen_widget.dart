@@ -1,4 +1,5 @@
 import 'package:calendar_app/static/colors.dart';
+import 'package:calendar_app/widgets/calendar_day.dart';
 import 'package:calendar_app/widgets/calendar_month.dart';
 import 'package:calendar_app/widgets/line_widget.dart';
 import 'package:calendar_app/widgets/sidebar.dart';
@@ -52,7 +53,8 @@ class ScreenWidget extends StatelessWidget {
         children: [
           SwitcherWidget(),
           TextFieldWidget(),
-          CalendarMonth(),
+          // CalendarMonth(),
+          CalendarDay(),
           LineWidget(),
           TasksList(),
         ],
