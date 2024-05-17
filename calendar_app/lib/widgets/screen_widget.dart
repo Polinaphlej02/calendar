@@ -1,6 +1,7 @@
 import 'package:calendar_app/static/colors.dart';
 import 'package:calendar_app/widgets/calendar_month.dart';
 import 'package:calendar_app/widgets/line_widget.dart';
+import 'package:calendar_app/widgets/sidebar.dart';
 import 'package:calendar_app/widgets/switcher_widget.dart';
 import 'package:calendar_app/widgets/tasks_list.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,7 @@ class ScreenWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: SideBarWidget(),
       appBar: AppBar(
         title: const Align(
             alignment: Alignment.centerRight,
@@ -32,21 +34,25 @@ class ScreenWidget extends StatelessWidget {
         backgroundColor: CalendarColors.mainBrown,
         leading: Padding(
             padding: EdgeInsets.only(left: 30),
-            child: IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.menu,
-                color: Colors.white,
-                size: 30,
-              ),
+            child: Builder(
+              builder: (context) {
+                return IconButton(
+                onPressed: () => Scaffold.of(context).openDrawer(),
+                icon: const Icon(
+                  Icons.menu,
+                  color: Colors.white,
+                  size: 30,
+                ),
+              );
+              }
             )),
       ),
       body: Column(
         children: [
-          const SwitcherWidget(),
-          const TextFieldWidget(),
-          const CalendarMonth(),
-          const LineWidget(),
+          SwitcherWidget(),
+          TextFieldWidget(),
+          CalendarMonth(),
+          LineWidget(),
           TasksList(),
         ],
       ),
