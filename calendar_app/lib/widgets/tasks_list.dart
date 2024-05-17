@@ -18,39 +18,53 @@ class TasksList extends StatelessWidget {
     "23 PM": "Going to bed",
     "24 PM": "Going to the gym",
   };
+  final ScrollController _scrollController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
     return Flexible(
-      child: ListView.builder(
-          shrinkWrap: true,
-          itemCount: tasks.length,
-          itemBuilder: (context, index) {
-            return  ListTile(
-              contentPadding: EdgeInsets.symmetric(horizontal: 35),
-                leading: Icon(Icons.check_box, color: CalendarColors.iconFGrey, size: 40,),
-                trailing: 
-                  const Column(
-                    children: [
-                      Flexible(
-                        child: Row(mainAxisSize: MainAxisSize.min,
-                          children: [
-                          Icon(Icons.circle, color: CalendarColors.iconFGrey, size: 12,),
-                          SizedBox(width: 5,),
-                          Icon(Icons.circle, color: CalendarColors.iconFGrey, size: 12,),
-                          ]),
+      child: Padding(
+        padding: EdgeInsets.only(right: 20),
+        child: RawScrollbar(
+
+          thumbColor: CalendarColors.iconFGrey,
+          radius: Radius.circular(20),
+          minThumbLength: 40,
+          thickness: 8,
+          controller: _scrollController,
+          thumbVisibility: true,
+          child: ListView.builder(
+              controller: _scrollController,
+              shrinkWrap: true,
+              itemCount: tasks.length,
+              itemBuilder: (context, index) {
+                return  ListTile(
+                  contentPadding: EdgeInsets.symmetric(horizontal: 35),
+                    leading: Icon(Icons.check_box, color: CalendarColors.iconFGrey, size: 40,),
+                    trailing: 
+                      const Column(
+                        children: [
+                          Flexible(
+                            child: Row(mainAxisSize: MainAxisSize.min,
+                              children: [
+                              Icon(Icons.circle, color: CalendarColors.iconFGrey, size: 12,),
+                              SizedBox(width: 5,),
+                              Icon(Icons.circle, color: CalendarColors.iconFGrey, size: 12,),
+                              ]),
+                          ),
+                          SizedBox()
+                        ],
                       ),
-                      SizedBox()
-                    ],
-                  ),
-                title: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Text("${tasks.keys.elementAt(index)}", style: taskTextStyle,),),
-                subtitle: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                  child: Text("${tasks.values.elementAt(index)}", style: taskTextStyle)),
-            );
-          },
+                    title: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: Text("${tasks.keys.elementAt(index)}", style: taskTextStyle,),),
+                    subtitle: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                      child: Text("${tasks.values.elementAt(index)}", style: taskTextStyle)),
+                );
+              },
+          ),
+        ),
       ),
     );
   }
