@@ -1,19 +1,15 @@
 import 'package:calendar_app/static/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class SwitcherWidget extends StatefulWidget {
-  final ValueNotifier<String> textNotifier;
-  const SwitcherWidget({super.key, required this.textNotifier});
-
-  
+  const SwitcherWidget({super.key});
 
   @override
   State<SwitcherWidget> createState() => _SwitcherWidgetState();
 }
 
 class _SwitcherWidgetState extends State<SwitcherWidget> {
-
-  
 
   static const TextStyle switcherTextStyle = TextStyle(
     fontFamily: "Mulish-VariableFont_wght",
@@ -28,11 +24,11 @@ class _SwitcherWidgetState extends State<SwitcherWidget> {
     "Month": CalendarColors.mainBrown,
   };
 
-  String chosenButton = "Month";
+  // String chosenButton = context.inh;
 
   void _changeColor(String name) {
     setState(() {
-    chosenButton = name;
+    // chosenButton = name;
     buttonFill.forEach((key, value) {buttonFill[key] = CalendarColors.lightBrown;});
     buttonFill[name] = CalendarColors.mainBrown;
     });
@@ -59,7 +55,7 @@ class _SwitcherWidgetState extends State<SwitcherWidget> {
                   TextButton(
                     onPressed: () {
                       _changeColor(name);
-                      widget.textNotifier.value = chosenButton;
+                      
                       },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: buttonFill[name],

@@ -3,15 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 // import 'package:calendar_day_view/calendar_day_view.dart';
 
-class CalendarDay extends StatefulWidget {
+class CalendarDay extends StatelessWidget {
   const CalendarDay({super.key});
-
-  @override
-  State<CalendarDay> createState() => _CalendarWeekState();
-}
-
-class _CalendarWeekState extends State<CalendarDay> {
-
 
   @override
   Widget build(BuildContext context) {
