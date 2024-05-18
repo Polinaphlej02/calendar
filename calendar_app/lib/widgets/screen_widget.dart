@@ -1,8 +1,10 @@
 import 'package:calendar_app/static/colors.dart';
-import 'package:calendar_app/widgets/screen%20parts/screen_bottom.dart';
-import 'package:calendar_app/widgets/screen%20parts/screen_top.dart';
+import 'package:calendar_app/widgets/line_widget.dart';
+import 'package:calendar_app/widgets/screen_top.dart';
 import 'package:calendar_app/widgets/sidebar.dart';
 import 'package:flutter/material.dart';
+
+import 'tasks_list.dart';
 
 
 
@@ -48,10 +50,11 @@ class ScreenWidget extends StatelessWidget {
                   }
                 )),
           ),
-          body: const Column(
+          body: Column(
             children: [
               ScreenTopWidget(),
-              ScreenBottomWidget()
+              LineWidget(),
+              TasksList(),
             ],
           ),
           floatingActionButton: Padding(

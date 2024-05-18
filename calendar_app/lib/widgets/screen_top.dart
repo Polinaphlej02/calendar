@@ -13,10 +13,12 @@ class ScreenTopWidget extends StatefulWidget {
 class _ScreenTopWidgetState extends State<ScreenTopWidget> {
   @override
   Widget build(BuildContext context) {
-    return const Column(children: [
-      SwitcherWidget(),
-      TextFieldWidget(),
-      CalendarWidget(),
-    ]);
+    return Container(
+      child: const Column(children: [
+        SwitcherWidget(),
+        TextFieldWidget(),
+        CalendarWidget(),
+      ]),
+    );
   }
 }
