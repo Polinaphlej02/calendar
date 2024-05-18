@@ -4,7 +4,7 @@ import 'package:calendar_app/widgets/calendars/calendar_week.dart';
 import 'package:flutter/material.dart';
 
 class CalendarWidget extends StatefulWidget {
-  // final String chosenCal;
+
   const CalendarWidget({super.key});
 
   @override
@@ -14,7 +14,7 @@ class CalendarWidget extends StatefulWidget {
 class _CalendarWidgetState extends State<CalendarWidget> {
 
 
-  ValueNotifier<String> textNotifier = ValueNotifier("Day");
+  ValueNotifier<String> textNotifier = ValueNotifier("Month");
 
   @override
   Widget build(BuildContext context) {
