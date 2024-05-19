@@ -4,7 +4,9 @@ import 'package:flutter/widgets.dart';
 
 class SwitcherWidget extends StatefulWidget {
 
-  const SwitcherWidget({super.key});
+  final ValueChanged<String> updateCalendar;
+
+  const SwitcherWidget({super.key, required this.updateCalendar});
 
   @override
   State<SwitcherWidget> createState() => _SwitcherWidgetState();
@@ -57,7 +59,7 @@ class _SwitcherWidgetState extends State<SwitcherWidget> {
                     TextButton(
                       onPressed: () {
                         _changeColor(name);
-
+                        widget.updateCalendar(name);
                         },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: buttonFill[name],
