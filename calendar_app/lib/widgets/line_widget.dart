@@ -1,5 +1,6 @@
 import 'package:calendar_app/static/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class LineWidget extends StatefulWidget {
   const LineWidget({super.key});
@@ -16,27 +17,33 @@ class _MyWidgetState extends State<LineWidget> {
     color: Colors.white,
   );
 
+  String getFocusedDay(DateTime dateTime) {
+    String month = DateFormat.MMMM().format(dateTime);
+    String day = dateTime.day.toString();
+    return "$month $day";
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
         color: CalendarColors.mainBrown,
-        child: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 50, vertical: 5),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 5),
           child: Row(
             children: [
               Expanded(
                   child: Text(
-                "May 7",
+                getFocusedDay(DateTime.now()),
                 style: lineTextStyle,
               )),
-              Text(
+              const Text(
                 "0/2",
                 style: lineTextStyle,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
-              Icon(
+              const Icon(
                 Icons.arrow_right,
                 size: 30,
               ),
