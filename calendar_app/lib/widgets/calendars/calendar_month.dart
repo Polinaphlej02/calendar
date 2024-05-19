@@ -5,22 +5,27 @@ class CalendarMonth extends StatelessWidget {
   final CalendarFormat calFormat = CalendarFormat.month;
   CalendarMonth({super.key, calFormat});
 
-  final TextStyle dayStyle = TextStyle(
+  final TextStyle dayStyle = const TextStyle(
       color: Color.fromARGB(225, 46, 39, 57), fontWeight: FontWeight.w900);
 
   final DateTime _focusedDay = DateTime.now();
 
-  final DateTime _firstDay = DateTime.now().subtract(const Duration(days: 1000));
+  final DateTime _firstDay =
+      DateTime.now().subtract(const Duration(days: 1000));
 
   final DateTime _lastDay = DateTime.now().add(const Duration(days: 1000));
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.only(top: 20, bottom: 20),
-        child: Row(
-          children: [
-          IconButton(onPressed: () => {}, icon: Icon(Icons.arrow_left,size: 30,)),
+        padding: const EdgeInsets.only(top: 20, bottom: 20),
+        child: Row(children: [
+          IconButton(
+              onPressed: () => {},
+              icon: const Icon(
+                Icons.arrow_left,
+                size: 30,
+              )),
           Expanded(
             child: TableCalendar(
               focusedDay: _focusedDay,
@@ -43,7 +48,12 @@ class CalendarMonth extends StatelessWidget {
               headerVisible: false,
             ),
           ),
-          IconButton(onPressed: (){}, icon: Icon(Icons.arrow_right,size: 30,)),
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.arrow_right,
+                size: 30,
+              )),
         ]));
   }
 }

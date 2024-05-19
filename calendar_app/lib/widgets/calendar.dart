@@ -12,8 +12,6 @@ class CalendarWidget extends StatefulWidget {
 }
 
 class _CalendarWidgetState extends State<CalendarWidget> {
-  // ValueNotifier<String> textNotifier = ValueNotifier("Month");
-
   @override
   Widget build(BuildContext context) {
     final chosenCal = MyInheritedWidget.of(context)?.chosenCal;
@@ -23,7 +21,7 @@ class _CalendarWidgetState extends State<CalendarWidget> {
     } else if (chosenCal == "Week") {
       return CalendarWeek();
     } else {
-      return CalendarDay();
+      return const CalendarDay();
     }
   }
 }

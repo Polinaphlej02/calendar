@@ -19,18 +19,29 @@ class _MyWidgetState extends State<LineWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: CalendarColors.mainBrown,
-      child: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 50, vertical: 5),
-        child:Row(
-        children: [
-        Expanded(child: Text("May 7", style: lineTextStyle,)),
-        Text("0/2", style: lineTextStyle,),
-        SizedBox(
-          width: 10,
-        ),
-        Icon(Icons.arrow_right,size: 30,),
-      ],),
-    ));
+        color: CalendarColors.mainBrown,
+        child: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 50, vertical: 5),
+          child: Row(
+            children: [
+              Expanded(
+                  child: Text(
+                "May 7",
+                style: lineTextStyle,
+              )),
+              Text(
+                "0/2",
+                style: lineTextStyle,
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Icon(
+                Icons.arrow_right,
+                size: 30,
+              ),
+            ],
+          ),
+        ));
   }
 }
