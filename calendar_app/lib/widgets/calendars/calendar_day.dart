@@ -16,7 +16,7 @@ class CalendarDay extends StatelessWidget {
           todayTextStyle: const TextStyle(
             fontFamily: "Mulish-VariableFont_wght",
             fontWeight: FontWeight.w900,
-            fontSize: 14,
+            fontSize: 15,
             color: Colors.white,
           ),
           todayHighlightColor: CalendarColors.mainBrown,

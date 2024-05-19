@@ -3,6 +3,7 @@ import 'package:calendar_app/widgets/line_widget.dart';
 import 'package:calendar_app/widgets/screen_top.dart';
 import 'package:calendar_app/widgets/sidebar.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import 'tasks_list.dart';
 
@@ -11,19 +12,25 @@ class ScreenWidget extends StatelessWidget {
     super.key,
   });
 
+  String getFocusedDate(DateTime dateTime) {
+    String month = DateFormat.MMMM().format(dateTime);
+    String year = dateTime.year.toString();
+    return "$month $year";
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       drawer: const SideBarWidget(),
       appBar: AppBar(
-        title: const Align(
+        title: Align(
             alignment: Alignment.centerRight,
             child: Padding(
-              padding: EdgeInsets.only(right: 30),
+              padding: const EdgeInsets.only(right: 30),
               child: Text(
-                "May 2024",
-                style: TextStyle(
+                getFocusedDate(DateTime.now()),
+                style: const TextStyle(
                   fontFamily: "Mulish-VariableFont_wght",
                   fontWeight: FontWeight.w900,
                   fontSize: 18,

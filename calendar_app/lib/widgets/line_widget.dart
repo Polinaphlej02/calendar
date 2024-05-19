@@ -13,7 +13,7 @@ class _MyWidgetState extends State<LineWidget> {
   static const TextStyle lineTextStyle = TextStyle(
     fontFamily: "Mulish-VariableFont_wght",
     fontWeight: FontWeight.w900,
-    fontSize: 13,
+    fontSize: 15,
     color: Colors.white,
   );
 

@@ -1,3 +1,4 @@
+import 'package:calendar_app/constants/constants.dart';
 import 'package:calendar_app/static/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -6,18 +7,9 @@ class TasksList extends StatelessWidget {
   static const TextStyle taskTextStyle = TextStyle(
     fontFamily: "Mulish-VariableFont_wght",
     fontWeight: FontWeight.w900,
-    fontSize: 12,
+    fontSize: 13,
   );
 
-  final Map tasks = {
-    "12 PM": "Prepare for presentation about new project",
-    "13 PM": "Meeting with colleagues",
-    "15 PM": "Meeting with colleagues",
-    "19 PM": "Going to the gym",
-    "21 PM": "Having a rest",
-    "23 PM": "Going to bed",
-    "24 PM": "Going to the gym",
-  };
   final ScrollController _scrollController = ScrollController();
 
   @override

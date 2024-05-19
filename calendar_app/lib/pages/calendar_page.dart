@@ -13,11 +13,11 @@ class CalendarApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '',
       routes: {
-        '': (context) => ScreenWidget(),
-        '/new_task': (context) => EmptyPage(),
+        '': (context) => const ScreenWidget(),
+        '/new_task': (context) => const EmptyPage(),
       },
       title: 'Flutter Demo',
-      home:  ScreenWidget(),
+      home: const ScreenWidget(),
     );
   }
 }
