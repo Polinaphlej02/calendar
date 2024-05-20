@@ -4,4 +4,3 @@ import 'pages/calendar_page.dart';
 void main() {
   runApp(const CalendarApp());
 }
-

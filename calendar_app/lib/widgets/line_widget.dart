@@ -1,5 +1,5 @@
+import 'package:calendar_app/utils/date.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class LineWidget extends StatefulWidget {
   const LineWidget({super.key});
@@ -9,12 +9,6 @@ class LineWidget extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<LineWidget> {
-  String getFocusedDay(DateTime dateTime) {
-    String month = DateFormat.MMMM().format(dateTime);
-    String day = dateTime.day.toString();
-    return "$month $day";
-  }
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,7 +19,7 @@ class _MyWidgetState extends State<LineWidget> {
             children: [
               Expanded(
                   child: Text(
-                getFocusedDay(DateTime.now()),
+                monthDay,
                 style: Theme.of(context).textTheme.headlineMedium,
               )),
               Text(

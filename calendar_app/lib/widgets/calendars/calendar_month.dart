@@ -5,7 +5,6 @@ class CalendarMonth extends StatelessWidget {
   final CalendarFormat calFormat = CalendarFormat.month;
   CalendarMonth({super.key, calFormat});
 
-
   final DateTime _focusedDay = DateTime.now();
 
   final DateTime _firstDay =

@@ -11,8 +11,6 @@ class SwitcherWidget extends StatefulWidget {
 }
 
 class _SwitcherWidgetState extends State<SwitcherWidget> {
-
-
   String chosenButton = "Month";
 
   void _changeColor(String name) {
@@ -53,12 +51,8 @@ class _SwitcherWidgetState extends State<SwitcherWidget> {
                         borderRadius: BorderRadius.circular(12),
                       ),
                     ),
-                    child: Text(
-                      name, 
-                      style: Theme.of(context)
-                        .textTheme
-                        .headlineMedium
-                    ),
+                    child: Text(name,
+                        style: Theme.of(context).textTheme.headlineMedium),
                   ),
               ],
             )),
