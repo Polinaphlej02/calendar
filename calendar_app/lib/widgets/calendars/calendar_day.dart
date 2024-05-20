@@ -1,4 +1,3 @@
-import 'package:calendar_app/static/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
@@ -13,13 +12,8 @@ class CalendarDay extends StatelessWidget {
         child: SfCalendar(
           view: CalendarView.day,
           headerHeight: 0,
-          todayTextStyle: const TextStyle(
-            fontFamily: "Mulish-VariableFont_wght",
-            fontWeight: FontWeight.w900,
-            fontSize: 15,
-            color: Colors.white,
-          ),
-          todayHighlightColor: CalendarColors.mainBrown,
+          todayTextStyle: Theme.of(context).textTheme.bodyMedium,
+          todayHighlightColor: Theme.of(context).highlightColor,
           showCurrentTimeIndicator: false,
         ),
       ),

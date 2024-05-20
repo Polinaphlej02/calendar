@@ -1,4 +1,4 @@
-import 'package:calendar_app/static/colors.dart';
+import 'package:calendar_app/themes/constants.dart';
 import 'package:flutter/material.dart';
 
 class SideBarWidget extends StatelessWidget {
@@ -7,7 +7,7 @@ class SideBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Drawer(
-      backgroundColor: CalendarColors.sideBarBrown,
+      backgroundColor: sideBarBrown,
     );
   }
 }

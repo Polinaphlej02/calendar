@@ -4,9 +4,6 @@ import 'package:table_calendar/table_calendar.dart';
 class CalendarWeek extends StatelessWidget {
   CalendarWeek({super.key});
 
-  final TextStyle dayStyle = const TextStyle(
-      color: Color.fromARGB(225, 46, 39, 57), fontWeight: FontWeight.w900);
-
   final DateTime _focusedDay = DateTime.now();
 
   final DateTime _firstDay =
@@ -33,8 +30,8 @@ class CalendarWeek extends StatelessWidget {
               rowHeight: 40,
               calendarFormat: CalendarFormat.week,
               daysOfWeekStyle: DaysOfWeekStyle(
-                weekdayStyle: dayStyle,
-                weekendStyle: dayStyle,
+                weekdayStyle: Theme.of(context).textTheme.titleSmall!,
+                weekendStyle: Theme.of(context).textTheme.titleSmall!,
               ),
               calendarStyle: const CalendarStyle(
                   todayDecoration: BoxDecoration(

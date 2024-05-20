@@ -1,4 +1,3 @@
-import 'package:calendar_app/static/colors.dart';
 import 'package:calendar_app/widgets/line_widget.dart';
 import 'package:calendar_app/widgets/screen_top.dart';
 import 'package:calendar_app/widgets/sidebar.dart';
@@ -21,6 +20,7 @@ class ScreenWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       resizeToAvoidBottomInset: false,
       drawer: const SideBarWidget(),
       appBar: AppBar(
@@ -30,15 +30,10 @@ class ScreenWidget extends StatelessWidget {
               padding: const EdgeInsets.only(right: 30),
               child: Text(
                 getFocusedDate(DateTime.now()),
-                style: const TextStyle(
-                  fontFamily: "Mulish-VariableFont_wght",
-                  fontWeight: FontWeight.w900,
-                  fontSize: 18,
-                  color: Colors.white,
-                ),
+                style: Theme.of(context).textTheme.headlineLarge,
               ),
             )),
-        backgroundColor: CalendarColors.mainBrown,
+        backgroundColor: Theme.of(context).primaryColor,
         leading: Padding(
             padding: const EdgeInsets.only(left: 30),
             child: Builder(builder: (context) {
@@ -63,32 +58,27 @@ class ScreenWidget extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 25),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: CalendarColors.darkBrown,
+            backgroundColor: Theme.of(context).primaryColorDark,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
           ),
-          child: const Padding(
-            padding: EdgeInsets.symmetric(vertical: 10),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10),
             child: Row(
               children: [
                 Expanded(
                     child: Text("Create new task",
-                        style: TextStyle(
-                          fontFamily: "Mulish-VariableFont_wght",
-                          fontWeight: FontWeight.w900,
-                          fontSize: 15,
-                          color: Colors.white,
-                        ))),
+                        style: Theme.of(context).textTheme.headlineMedium)),
                 Stack(children: [
                   Icon(
                     Icons.circle,
-                    color: CalendarColors.circleBrown,
+                    color: Theme.of(context).iconTheme.color,
                     size: 40,
                   ),
                   Icon(
                     Icons.add,
-                    color: CalendarColors.darkBrown,
+                    color: Theme.of(context).primaryColor,
                     size: 40,
                   )
                 ])

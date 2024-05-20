@@ -5,8 +5,6 @@ class CalendarMonth extends StatelessWidget {
   final CalendarFormat calFormat = CalendarFormat.month;
   CalendarMonth({super.key, calFormat});
 
-  final TextStyle dayStyle = const TextStyle(
-      color: Color.fromARGB(225, 46, 39, 57), fontWeight: FontWeight.w900);
 
   final DateTime _focusedDay = DateTime.now();
 
@@ -34,8 +32,8 @@ class CalendarMonth extends StatelessWidget {
               rowHeight: 40,
               calendarFormat: CalendarFormat.month,
               daysOfWeekStyle: DaysOfWeekStyle(
-                weekdayStyle: dayStyle,
-                weekendStyle: dayStyle,
+                weekdayStyle: Theme.of(context).textTheme.titleSmall!,
+                weekendStyle: Theme.of(context).textTheme.titleSmall!,
               ),
               calendarStyle: const CalendarStyle(
                   todayDecoration: BoxDecoration(

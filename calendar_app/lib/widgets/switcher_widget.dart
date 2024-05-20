@@ -1,4 +1,4 @@
-import 'package:calendar_app/static/colors.dart';
+import 'package:calendar_app/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class SwitcherWidget extends StatefulWidget {
@@ -11,18 +11,7 @@ class SwitcherWidget extends StatefulWidget {
 }
 
 class _SwitcherWidgetState extends State<SwitcherWidget> {
-  static const TextStyle switcherTextStyle = TextStyle(
-    fontFamily: "Mulish-VariableFont_wght",
-    fontWeight: FontWeight.w900,
-    fontSize: 14,
-    color: Colors.white,
-  );
 
-  Map buttonFill = {
-    "Day": CalendarColors.lightBrown,
-    "Week": CalendarColors.lightBrown,
-    "Month": CalendarColors.mainBrown,
-  };
 
   String chosenButton = "Month";
 
@@ -30,9 +19,9 @@ class _SwitcherWidgetState extends State<SwitcherWidget> {
     setState(() {
       chosenButton = name;
       buttonFill.forEach((key, value) {
-        buttonFill[key] = CalendarColors.lightBrown;
+        buttonFill[key] = Theme.of(context).highlightColor;
       });
-      buttonFill[name] = CalendarColors.mainBrown;
+      buttonFill[name] = Theme.of(context).primaryColor;
     });
   }
 
@@ -40,14 +29,14 @@ class _SwitcherWidgetState extends State<SwitcherWidget> {
   Widget build(BuildContext context) {
     return Center(
         child: Container(
-      color: CalendarColors.mainBrown,
+      color: Theme.of(context).primaryColor,
       child: Padding(
         padding: const EdgeInsets.only(left: 50, right: 50, bottom: 15),
         child: Container(
             padding: const EdgeInsets.only(top: 6, bottom: 6),
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(10)),
-              color: CalendarColors.lightBrown,
+            decoration: BoxDecoration(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              color: Theme.of(context).highlightColor,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -64,7 +53,12 @@ class _SwitcherWidgetState extends State<SwitcherWidget> {
                         borderRadius: BorderRadius.circular(12),
                       ),
                     ),
-                    child: Text(name, style: switcherTextStyle),
+                    child: Text(
+                      name, 
+                      style: Theme.of(context)
+                        .textTheme
+                        .headlineMedium
+                    ),
                   ),
               ],
             )),
